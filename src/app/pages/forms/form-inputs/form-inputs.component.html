@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>Offline Input</nb-card-header>
+      <nb-card-body>
+ 
+        <div class="full-name-inputs">
+          <input type="text" nbInput fullWidth placeholder="First Name" [(ngModel)]="userInput.firstName">
+          <input type="text" nbInput fullWidth placeholder="Last Name" [(ngModel)]="userInput.lastName">
+        </div>
+
+        <div class="full-name-inputs">
+          <input type="text" nbInput fullWidth placeholder="Email" [(ngModel)]="userInput.email">
+
+        </div>
+        <div class="full-name-inputs">
+          <input type="text" nbInput fullWidth  placeholder="Username" [(ngModel)]="userInput.username">
+
+        </div>
+        <div class="full-name-inputs">
+          <input type="text" nbInput fullWidth type="number" placeholder="Age" [(ngModel)]="userInput.age">
+
+        </div>
+
+        <button nbButton outline (click)="Save()">
+          Save
+        </button>
+        Online: {{isConnected}}
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </nb-card>
+  </div>
+
+</div>
