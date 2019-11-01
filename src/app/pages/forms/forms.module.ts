@@ -20,6 +20,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsModule as ngFormsModule } from '@angular/forms';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxPicaModule } from '@digitalascetic/ngx-pica';
 @NgModule({
   imports: [
     ThemeModule,
@@ -37,6 +38,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     ngFormsModule,
     Ng2SmartTableModule,
     PdfViewerModule,
+    NgxPicaModule,
   ],
   declarations: [
     FormsComponent,
